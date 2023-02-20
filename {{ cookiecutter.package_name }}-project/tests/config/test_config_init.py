@@ -17,6 +17,17 @@ def test():
     _ = config.env.private_team_arn
 
     # derived attributes
+    _ = config.env.s3dir_artifacts
+    _ = config.env.s3dir_data
+    _ = config.env.workspace_signin_url
+
+    _ = config.env.task_template_name
+    _ = config.env.flow_definition_name
+    _ = config.env.flow_definition_arn
+    _ = config.env.flow_id
+
+    _ = config.env.func_fullname_start_hil
+    _ = config.env.func_fullname_post_process
 
 
 if __name__ == "__main__":

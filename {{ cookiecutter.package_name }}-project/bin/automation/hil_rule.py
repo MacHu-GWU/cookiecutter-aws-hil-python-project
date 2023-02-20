@@ -126,7 +126,7 @@ def do_we_delete_hil(
         )
     else:
         return do_we_delete_this_resource_in_local(
-            resource_name="CloudFormation",
+            resource_name="Human Review Workflow",
             env_name=env_name,
             is_clean_up_branch=is_clean_up_branch,
         )

@@ -64,7 +64,7 @@ def delete_human_review_workflow(
     aws_a2i.remove_flow_definition(
         bsm=bsm,
         flow_definition_name=env.flow_definition_name,
-        wait=False,
+        wait=True,
     )
 
     aws_a2i.remove_hil_task_template(
