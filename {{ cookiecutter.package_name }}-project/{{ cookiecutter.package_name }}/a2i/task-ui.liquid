@@ -1,0 +1,30 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<crowd-form>
+  <full-instructions header="Instructions">
+    <p>Check the following data points: Date of expense, Payment method, Purpose of expenditure, amount. </p>
+  </full-instructions>
+
+  <short-instructions>
+    <p>Review this reimbursement request, approve or deny it.</p>
+  </short-instructions>
+
+  <h2>Reimbursement request</h2>
+  <ul>
+    <li>Date of expense = {% raw %}{{{% endraw %} task.input.date_of_expense {% raw %}}}{% endraw %}</li>
+    <li>Payment method = {% raw %}{{{% endraw %} task.input.payment_method {% raw %}}}{% endraw %}</li>
+    <li>Purpose of expenditure = {% raw %}{{{% endraw %} task.input.purpose_of_expenditure {% raw %}}}{% endraw %}</li>
+    <li>Amount = $ {% raw %}{{{% endraw %} task.input.amount {% raw %}}}{% endraw %}</li>
+  </ul>
+
+  <h2>Approve or deny it</h2>
+
+  <input type="radio" id="approve" name="decision" value="approve" required>
+  <label for="approve">Approve</label>
+
+  <input type="radio" id="deny" name="decision" value="deny" required>
+  <label for="deny">Deny</label>
+
+  <br>
+
+</crowd-form>

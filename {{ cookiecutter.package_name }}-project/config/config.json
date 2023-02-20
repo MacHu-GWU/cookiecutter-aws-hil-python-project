@@ -1,0 +1,21 @@
+{
+    "shared": {
+        "project_name": "{{ cookiecutter.package_name }}",
+        "s3uri_artifacts": "s3://{{ cookiecutter.aws_account_id }}-{{ cookiecutter.aws_region }}-artifacts/projects/{{ cookiecutter.package_name }}/",
+        "use_dynamodb_tracker": false
+    },
+    "envs": {
+        "dev": {
+            "s3uri_data": "s3://{{ cookiecutter.aws_account_id }}-{{ cookiecutter.aws_region }}-data/projects/{{ cookiecutter.package_name }}/dev/data/",
+            "private_team_arn": "arn:aws:sagemaker:{{ cookiecutter.aws_region }}:{{ cookiecutter.aws_account_id }}:workteam/private-crowd/my-private-team"
+        },
+        "int": {
+            "s3uri_data": "s3://{{ cookiecutter.aws_account_id }}-{{ cookiecutter.aws_region }}-data/projects/{{ cookiecutter.package_name }}/int/data/",
+            "private_team_arn": "arn:aws:sagemaker:{{ cookiecutter.aws_region }}:{{ cookiecutter.aws_account_id }}:workteam/private-crowd/my-private-team"
+        },
+        "prod": {
+            "s3uri_data": "s3://{{ cookiecutter.aws_account_id }}-{{ cookiecutter.aws_region }}-data/projects/{{ cookiecutter.package_name }}/prod/data/",
+            "private_team_arn": "arn:aws:sagemaker:{{ cookiecutter.aws_region }}:{{ cookiecutter.aws_account_id }}:workteam/private-crowd/my-private-team"
+        }
+    }
+}
