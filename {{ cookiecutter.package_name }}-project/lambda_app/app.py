@@ -14,7 +14,7 @@ stack_output = Output.get()
 
 
 @app.on_s3_event(
-    name=env.func_fullname_start_hil,
+    name=env.func_name_start_hil,
     bucket=env.s3dir_reimbursement_request.bucket,
     prefix=env.s3dir_reimbursement_request.key,
 )
@@ -24,7 +24,7 @@ def start_hil_lambda_handler(event: S3Event):
 
 
 @app.on_s3_event(
-    name=env.func_fullname_post_process,
+    name=env.func_name_post_process,
     bucket=env.s3dir_hil_output.bucket,
     prefix=env.s3dir_hil_output.key,
 )
